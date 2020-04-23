@@ -8,6 +8,7 @@ function App() {
 
   const [scoreHome, setScoreHome] = useState(0);
   const [scoreAway, setScoreAway] = useState(0);
+  const [quarter, setQuarter] = useState(1);
 
   return (
     <div className="container">
@@ -57,6 +58,14 @@ function App() {
             }}>
             Away Field Goal
           </button>
+        </div>
+        <div className="quarterButton">
+            <button 
+            onClick={() => {
+              setQuarter(quarter + 1);
+            }}>
+            Change Quarter
+            </button>
         </div>
       </section>
     </div>
